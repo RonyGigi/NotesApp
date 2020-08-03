@@ -52,3 +52,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'simple_format', '~> 0.0.2'
+gem 'devise', '~> 4.7', '>= 4.7.2'
