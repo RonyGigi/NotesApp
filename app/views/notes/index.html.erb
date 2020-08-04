@@ -1,0 +1,9 @@
+<%= link_to "New Note", new_note_path %>
+<% @note.each do |note| %>
+<h1><%=note.title%></h1>
+<div>
+<p><%= note.content %></p>
+<%=link_to "Delete note", note_path(note),method: :delete, data: {confirm: "Are you sure?"}%>
+<%= link_to  "Edit Note",edit_note_path(note) %>
+</div>
+<%end%>

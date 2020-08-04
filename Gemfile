@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+#gem 'rails', '~> 5.2.0'#4.2.3'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
@@ -54,5 +55,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml', '~> 5.0', '>= 5.0.4'
-gem 'simple_format', '~> 0.0.2'
 gem 'devise', '~> 4.7', '>= 4.7.2'
