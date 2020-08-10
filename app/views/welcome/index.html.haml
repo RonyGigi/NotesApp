@@ -1,1 +1,10 @@
-%h1 This is welcome page
+#banner
+    .banner_content
+    %h1 NotesApp
+    %p Online Notebook
+    %button= link_to "Sign Up" ,new_user_registration_path
+
+#motto
+    .wrapper
+        %p.quote= "Your custom notes app"
+        %p.name= "admin"

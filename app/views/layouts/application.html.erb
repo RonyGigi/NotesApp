@@ -7,14 +7,26 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
   </head>
 
   <body>
+  <!--
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <div>  
-  <h1>Notes App</h1>
-    <%= yield %>
+  -->
+  <div>
+    <nav>
+    <%= link_to image_tag('logo.jpeg',  :size => '200x200'), root_path , id: "logo"  %>
+    <% if user_signed_in? %>
+      <%=  link_to "New Note" ,new_note_path  , class: "nav-links1" %>
+      <%=  link_to "Sign Out", destroy_user_session_path ,method: :delete , class: "nav-links2"  %>
+    <% else %>
+      <%=  link_to "Log in", new_user_session_path , class: "nav-links3"  %>
+      <%=  link_to "Sign Up", new_user_registration_path , class: "nav-links4" %>
+    <%end %>
+    </nav>
+    <%=yield%>
   </div>
   </body>
 </html>

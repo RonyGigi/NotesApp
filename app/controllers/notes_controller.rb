@@ -15,7 +15,7 @@ class NotesController < ApplicationController
     def create
         @note=current_user.notes.build(note_params)
         if @note.save
-            redirect_to @note
+            redirect_to root_path
         else
             render 'new'
         end
